@@ -19,37 +19,37 @@
             <div class="col-12 col-lg-7">
                 <div class="single_product_thumb">
                     <div id="product_details_slider" class="carousel slide" data-ride="carousel">
-                        <!-- <ol class="carousel-indicators">
-                            <li class="active" data-target="#product_details_slider" data-slide-to="0" style="background-image: url(img/product-img/pro-big-1.jpg);">
+                        <ol class="carousel-indicators">
+                            <li class="active" data-target="#product_details_slider" data-slide-to="0" style="background-image: url({{asset($item->photo)}});">
                             </li>
-                            <li data-target="#product_details_slider" data-slide-to="1" style="background-image: url(img/product-img/pro-big-2.jpg);">
+                            <li data-target="#product_details_slider" data-slide-to="1" style="background-image: url({{asset($item->photo)}});">
                             </li>
-                            <li data-target="#product_details_slider" data-slide-to="2" style="background-image: url(img/product-img/pro-big-3.jpg);">
+                            <li data-target="#product_details_slider" data-slide-to="2" style="background-image: url({{asset($item->photo)}});">
                             </li>
-                            <li data-target="#product_details_slider" data-slide-to="3" style="background-image: url(img/product-img/pro-big-4.jpg);">
+                            <li data-target="#product_details_slider" data-slide-to="3" style="background-image: url({{asset($item->photo)}});">
                             </li>
-                        </ol> -->
+                        </ol>
                         <div class="carousel-inner">
                             <div class="carousel-item active">
-                                <a class="gallery_img" href="img/product-img/pro-big-1.jpg">
+                                <a class="gallery_img" href="{{asset($item->photo)}}">
                                     <img class="d-block w-100" src="{{asset($item->photo)}}" alt="First slide">
                                 </a>
                             </div>
-                            <!-- <div class="carousel-item">
-                                <a class="gallery_img" href="img/product-img/pro-big-2.jpg">
-                                    <img class="d-block w-100" src="img/product-img/pro-big-2.jpg" alt="Second slide">
+                            <div class="carousel-item">
+                                <a class="gallery_img" href="{{asset($item->photo)}}">
+                                    <img class="d-block w-100" src="{{asset($item->photo)}}" alt="Second slide">
                                 </a>
                             </div>
                             <div class="carousel-item">
-                                <a class="gallery_img" href="img/product-img/pro-big-3.jpg">
-                                    <img class="d-block w-100" src="img/product-img/pro-big-3.jpg" alt="Third slide">
+                                <a class="gallery_img" href="{{asset($item->photo)}}">
+                                    <img class="d-block w-100" src="{{asset($item->photo)}}" alt="Third slide">
                                 </a>
                             </div>
                             <div class="carousel-item">
-                                <a class="gallery_img" href="img/product-img/pro-big-4.jpg">
-                                    <img class="d-block w-100" src="img/product-img/pro-big-4.jpg" alt="Fourth slide">
+                                <a class="gallery_img" href="{{asset($item->photo)}}">
+                                    <img class="d-block w-100" src="{{asset($item->photo)}}" alt="Fourth slide">
                                 </a>
-                            </div> -->
+                            </div>
                         </div>
                     </div>
                 </div>
