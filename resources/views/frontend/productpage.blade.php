@@ -7,13 +7,11 @@
         <div class="row">
             @foreach($items as $item)
             <!-- Single Product Area -->
-            <div class="col-lg-4 col-md-6 col-sm-12">
+            <div class="col-lg-3 col-md-6 col-sm-12">
                 <x-item-component :item="$item"></x-item-component>
             </div>
             @endforeach
         </div>
     </div>
 </div>
-@endsection
-@section('script')
 @endsection

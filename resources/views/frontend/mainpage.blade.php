@@ -5,122 +5,90 @@
         <div class="products-catagories-area clearfix">
             <div class="amado-pro-catagory clearfix">
 
-                <!-- Single Catagory -->
-                <div class="single-products-catagory clearfix">
+                <div class="single-products-catagory shadow-sm p-3 mb-5 bg-white rounded clearfix">
                     <a href="shop.html">
-                        <img src="{{asset('my_asset/img/bg-img/1.jpg')}}" alt="">
-                        <!-- Hover Content -->
-                        <div class="hover-content">
+                        <img src="{{$items[0]->photo}}" class="img-fluid" style="height:450px; border-radius: 50%;">
+                        <div class="hover-content p-2 rounded">
                             <div class="line"></div>
-                            <p>From $180</p>
-                            <h4>Modern Chair</h4>
+                            <h4>{{$items[0]->name}}</h4>
+                        </div>
+                    </a>
+                </div>
+                <div class="single-products-catagory shadow-sm p-3 mb-5 bg-white rounded clearfix">
+                    <a href="shop.html">
+                        <img src="{{$brands[0]->photo}}" class="img-fluid" style="height:400px; border-radius: 50%;">
+                        <div class="hover-content p-2 rounded">
+                            <div class="line"></div>
+                            <h4>{{$brands[0]->name}}</h4>
+                        </div>
+                    </a>
+                </div>
+                <div class="single-products-catagory shadow-sm p-3 mb-5 bg-white rounded clearfix">
+                    <a href="shop.html">
+                        <img src="{{$categories[0]->photo}}" class="img-fluid" style="height:350px; border-radius: 50%;">
+                        <div class="hover-content p-2 rounded">
+                            <div class="line"></div>
+                            <h4>{{$categories[0]->name}}</h4>
                         </div>
                     </a>
                 </div>
 
-                <!-- Single Catagory -->
-                <div class="single-products-catagory clearfix">
+                <div class="single-products-catagory shadow-sm p-3 mb-5 bg-white rounded clearfix">
                     <a href="shop.html">
-                        <img src="{{asset('my_asset/img/bg-img/2.jpg')}}" alt="">
-                        <!-- Hover Content -->
-                        <div class="hover-content">
+                        <img src="{{$items[1]->photo}}" class="img-fluid" style="height:450px; border-radius: 50%;">
+                        <div class="hover-content p-2 rounded">
                             <div class="line"></div>
-                            <p>From $180</p>
-                            <h4>Minimalistic Plant Pot</h4>
+                            <h4>{{$items[1]->name}}</h4>
+                        </div>
+                    </a>
+                </div>
+                <div class="single-products-catagory shadow-sm p-3 mb-5 bg-white rounded clearfix">
+                    <a href="shop.html">
+                        <img src="{{$categories[1]->photo}}" class="img-fluid" style="height:350px; border-radius: 50%;">
+                        <div class="hover-content p-2 rounded">
+                            <div class="line"></div>
+                            <h4>{{$categories[1]->name}}</h4>
+                        </div>
+                    </a>
+                </div>
+                <div class="single-products-catagory shadow-sm p-3 mb-5 bg-white rounded clearfix">
+                    <a href="shop.html">
+                        <img src="{{$brands[1]->photo}}" class="img-fluid" style="height:400px; border-radius: 50%;">
+                        <div class="hover-content p-2 rounded">
+                            <div class="line"></div>
+                            <h4>{{$brands[1]->name}}</h4>
                         </div>
                     </a>
                 </div>
 
-                <!-- Single Catagory -->
-                <div class="single-products-catagory clearfix">
+                <div class="single-products-catagory shadow-sm p-3 mb-5 bg-white rounded clearfix">
                     <a href="shop.html">
-                        <img src="{{asset('my_asset/img/bg-img/3.jpg')}}" alt="">
-                        <!-- Hover Content -->
-                        <div class="hover-content">
+                        <img src="{{$items[2]->photo}}" class="img-fluid" style="height:450px; border-radius: 50%;">
+                        <div class="hover-content p-2 rounded">
                             <div class="line"></div>
-                            <p>From $180</p>
-                            <h4>Modern Chair</h4>
+                            <h4>{{$items[2]->name}}</h4>
                         </div>
                     </a>
                 </div>
-
-                <!-- Single Catagory -->
-                <div class="single-products-catagory clearfix">
+                <div class="single-products-catagory shadow-sm p-3 mb-5 bg-white rounded clearfix">
                     <a href="shop.html">
-                        <img src="{{asset('my_asset/img/bg-img/4.jpg')}}" alt="">
-                        <!-- Hover Content -->
-                        <div class="hover-content">
+                        <img src="{{$brands[2]->photo}}" class="img-fluid" style="height:400px; border-radius: 50%;">
+                        <div class="hover-content p-2 rounded">
                             <div class="line"></div>
-                            <p>From $180</p>
-                            <h4>Night Stand</h4>
+                            <h4>{{$brands[2]->name}}</h4>
                         </div>
                     </a>
                 </div>
-
-                <!-- Single Catagory -->
-                <div class="single-products-catagory clearfix">
+                <div class="single-products-catagory shadow-sm p-3 mb-5 bg-white rounded clearfix">
                     <a href="shop.html">
-                        <img src="{{asset('my_asset/img/bg-img/5.jpg')}}" alt="">
-                        <!-- Hover Content -->
-                        <div class="hover-content">
+                        <img src="{{$categories[2]->photo}}" class="img-fluid" style="height:350px; border-radius: 50%;">
+                        <div class="hover-content p-2 rounded">
                             <div class="line"></div>
-                            <p>From $18</p>
-                            <h4>Plant Pot</h4>
+                            <h4>{{$categories[2]->name}}</h4>
                         </div>
                     </a>
                 </div>
-
-                <!-- Single Catagory -->
-                <div class="single-products-catagory clearfix">
-                    <a href="shop.html">
-                        <img src="{{asset('my_asset/img/bg-img/6.jpg')}}" alt="">
-                        <!-- Hover Content -->
-                        <div class="hover-content">
-                            <div class="line"></div>
-                            <p>From $320</p>
-                            <h4>Small Table</h4>
-                        </div>
-                    </a>
-                </div>
-
-                <!-- Single Catagory -->
-                <div class="single-products-catagory clearfix">
-                    <a href="shop.html">
-                        <img src="{{asset('my_asset/img/bg-img/7.jpg')}}" alt="">
-                        <!-- Hover Content -->
-                        <div class="hover-content">
-                            <div class="line"></div>
-                            <p>From $318</p>
-                            <h4>Metallic Chair</h4>
-                        </div>
-                    </a>
-                </div>
-
-                <!-- Single Catagory -->
-                <div class="single-products-catagory clearfix">
-                    <a href="shop.html">
-                        <img src="{{asset('my_asset/img/bg-img/8.jpg')}}" alt="">
-                        <!-- Hover Content -->
-                        <div class="hover-content">
-                            <div class="line"></div>
-                            <p>From $318</p>
-                            <h4>Modern Rocking Chair</h4>
-                        </div>
-                    </a>
-                </div>
-
-                <!-- Single Catagory -->
-                <div class="single-products-catagory clearfix">
-                    <a href="shop.html">
-                        <img src="{{asset('my_asset/img/bg-img/9.jpg')}}" alt="">
-                        <!-- Hover Content -->
-                        <div class="hover-content">
-                            <div class="line"></div>
-                            <p>From $318</p>
-                            <h4>Home Deco</h4>
-                        </div>
-                    </a>
-                </div>
+                
             </div>
         </div>
 

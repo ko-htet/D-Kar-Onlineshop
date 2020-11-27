@@ -980,6 +980,7 @@ img {
     .single-products-catagory a img {
       width: 100%; }
   .single-products-catagory .hover-content {
+    background-color: rgba(255, 255, 255, 0.6);
     position: absolute;
     top: 40px;
     left: 40px;

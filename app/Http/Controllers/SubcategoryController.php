@@ -39,7 +39,7 @@ class SubcategoryController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            "name" => "required|min:5",
+            "name" => "required|min:4",
             "category_id" => "required",
         ]);
 
@@ -84,7 +84,7 @@ class SubcategoryController extends Controller
     public function update(Request $request, Subcategory $subcategory)
     {
         $request->validate([
-            "name" => "required|min:5",
+            "name" => "required|min:4",
             "category_id" => "required",
         ]);
 

@@ -47,7 +47,7 @@
 
                 <div class="row">
                     @foreach($items as $item)
-                        <div class="col-12 col-sm-6 col-md-12 col-xl-6">
+                        <div class="col-md-4 col-sm-6 col-xs-6">
                             <x-item-component :item="$item"></x-item-component>
                         </div>
                     @endforeach

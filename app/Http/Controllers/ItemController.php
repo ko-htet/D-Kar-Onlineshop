@@ -7,6 +7,7 @@ use App\Brand;
 use App\Category;
 use App\Subcategory;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class ItemController extends Controller
 {
@@ -145,6 +146,7 @@ class ItemController extends Controller
      */
     public function destroy(Item $item)
     {
+        Storage::delete('storage/app/public/item_img/', $item->name);
         $item->delete();
         return redirect()->route('item.index');
     }

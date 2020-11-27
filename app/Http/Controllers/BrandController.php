@@ -40,7 +40,7 @@ class BrandController extends Controller
 
         // validation
         $request->validate([
-            "name" => "required|min:5",
+            "name" => "required|min:4",
             "photo" => "required|mimes:jpg,jpeg,bmp,png",
         ]);
         
@@ -98,7 +98,7 @@ class BrandController extends Controller
 
         // validation
         $request->validate([
-            "name" => "required|min:5",
+            "name" => "required|min:4",
             "photo" => "sometimes|required|mimes:jpg,jpeg,bmp,png",
             "oldphoto" => "required",
         ]);

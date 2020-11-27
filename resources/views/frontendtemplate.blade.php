@@ -3,6 +3,7 @@
 <html lang="en">
 
 <head>
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <meta charset="UTF-8">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -32,9 +33,8 @@
             <div class="row">
                 <div class="col-12">
                     <div class="search-content">
-                        <form action="#" method="get">
-                            <input type="search" name="search" id="search" placeholder="Type your keyword...">
-                            <button type="submit"><img src="{{asset('my_asset/img/core-img/search.png')}}" alt=""></button>
+                        <form method="POST" class="searchdiv">
+                            <input type="search" name="search" class="searchItem" id="search" placeholder="Type your keyword...">
                         </form>
                     </div>
                 </div>
@@ -93,23 +93,10 @@
                 <a href="{{route('discountpage')}}" class="btn amado-btn mb-15">%Discount%</a>
                 <a href="{{route('latestpage')}}" class="btn amado-btn active">Latest Products</a>
             </div>
-            <!-- <div class="btn-group">
-                <div class="btn-group dropright" role="group">
-                    <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <span class="sr-only">Toggle dropright</span>
-                    </button>
-                    <div class="dropdown-menu">
-                    ....
-                    </div>
-                </div>
-                <button type="button" class="btn btn-secondary">
-                    Split dropright
-                </button>
-            </div> -->
             <!-- Cart Menu -->
             <div class="cart-fav-search mb-100">
-                <a href="{{ route('cartpage') }}" class="cart-nav"><img src="{{asset('my_asset/img/core-img/cart.png')}}" alt=""> Cart <span class="badge badge-pill badge-warning badge-notify CartAmount pt-1">0</span></a>
-                <a href="#" class="fav-nav"><img src="{{asset('my_asset/img/core-img/favorites.png')}}" alt=""> Favourite</a>
+                <a href="{{ route('cartpage') }}" class="cart-nav"><img src="{{asset('my_asset/img/core-img/cart.png')}}" alt=""> Cart <span class="badge badge-pill badge-warning badge-notify CartAmount pt-1"></span></a>
+                <a href="{{ route('favpage') }}" class="fav-nav"><img src="{{asset('my_asset/img/core-img/favorites.png')}}" alt=""> Favourite <span class="badge badge-pill badge-warning badge-notify FNoti pt-1"></span></a>
                 <a href="#" class="search-nav"><img src="{{asset('my_asset/img/core-img/search.png')}}" alt=""> Search</a>
             </div>
             <!-- Social Button -->
@@ -123,6 +110,7 @@
         <!-- Header Area End -->
 
         <!-- Product Catagories Area Start -->
+        <div class="Search"></div>
         @yield('content')
         <!-- Product Catagories Area End -->
     </div>
@@ -221,6 +209,28 @@
     <!-- Sweetalert js -->
     <script src="{{asset('my_asset/js/sweetalert.min.js')}}"></script>
     @yield('script')
+
+    <script>
+        $(document).ready(function(){
+            $.ajaxSetup({
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                }
+            });
+            $('.searchdiv').keyup(function(){
+                var product = $('.searchItem').val();
+                // console.log(product);
+                $.post('{{ route('search')}}', {product:product}, function(response){
+                    // console.log(response);
+                    html = "";
+                    for(item of response){
+                        html += `<div>${item.name}</div>`;
+                    }
+                    $('.Search').html(html);
+                })
+            });
+        })
+    </script>
 
 </body>
 
