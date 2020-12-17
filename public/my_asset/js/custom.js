@@ -1,7 +1,7 @@
 $(document).ready(function(){
     showdata();
-    fshowdata();
     count();
+    fshowdata();
     fcount();
 
     $(".atc").click(function(){
@@ -200,17 +200,17 @@ $(document).ready(function(){
                             <div class="single-product-wrapper">
                                 <div class="product-img">
                                     <div style="height: 200px;">
+                                    <a href="itemdetail/${id}" class="mb-1">
                                         <img src="${photo}" class="img-fluid">
+                                    </a>
                                     </div>
                                 </div>
                                 <div class="product-description d-flex align-items-center justify-content-between">
                                     <div class="product-meta-data">
                                         <div class="line"></div>
-                                        <a href="product-details.html" class="mb-1">
+                                        <a href="itemdetail/${id}" class="mb-1">
                                             <h6>${name}</h6>
                                         </a>
-                                        <button type="submit" data-id="${id}" class="btn btn-outline-info" data-toggle="tooltip" data-placement="left" title="Detail">View Detail</button>
-                                        <button type="submit" data-id="${id}" class="btn btn-outline-danger item_delete" data-toggle="tooltip" data-placement="left" title="Detail">Delete</button>
                                     </div>
                                 </div>
                             </div>
@@ -219,20 +219,4 @@ $(document).ready(function(){
             $("#fav_product").html(html);
         }
     };
-    $("#fav_product").on("click",".item_delete",function(){
-        var r = confirm("Do you want to delete?");
-        if(r==true)
-        {
-            var id=$(this).data("id");
-            // console.log(id);
-            var itemlist=localStorage.getItem("Fitems");
-            var ItemArray=JSON.parse(itemlist);
-            ItemArray.splice(id,1);
-            var itemstring=JSON.stringify(ItemArray);
-            console.log(itemstring);
-            localStorage.setItem("Fitems", itemstring);
-            fshowdata();
-            fcount();                   
-        };
-    })
 })
