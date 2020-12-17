@@ -5,90 +5,39 @@
         <div class="products-catagories-area clearfix">
             <div class="amado-pro-catagory clearfix">
 
-                <div class="single-products-catagory shadow-sm p-3 mb-5 bg-white rounded clearfix">
-                    <a href="shop.html">
-                        <img src="{{$items[0]->photo}}" class="img-fluid" style="height:450px; border-radius: 50%;">
-                        <div class="hover-content p-2 rounded">
-                            <div class="line"></div>
-                            <h4>{{$items[0]->name}}</h4>
+                <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img class="d-block w-100" src="{{asset('storage/slid_img/1.png')}}" alt="First slide">
                         </div>
+                        <div class="carousel-item">
+                            <img class="d-block w-100" src="{{asset('storage/slid_img/2.png')}}" alt="Second slide">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block w-100" src="{{asset('storage/slid_img/3.png')}}" alt="Third slide">
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
                     </a>
-                </div>
-                <div class="single-products-catagory shadow-sm p-3 mb-5 bg-white rounded clearfix">
-                    <a href="shop.html">
-                        <img src="{{$brands[0]->photo}}" class="img-fluid" style="height:400px; border-radius: 50%;">
-                        <div class="hover-content p-2 rounded">
-                            <div class="line"></div>
-                            <h4>{{$brands[0]->name}}</h4>
-                        </div>
-                    </a>
-                </div>
-                <div class="single-products-catagory shadow-sm p-3 mb-5 bg-white rounded clearfix">
-                    <a href="shop.html">
-                        <img src="{{$categories[0]->photo}}" class="img-fluid" style="height:350px; border-radius: 50%;">
-                        <div class="hover-content p-2 rounded">
-                            <div class="line"></div>
-                            <h4>{{$categories[0]->name}}</h4>
-                        </div>
+                    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
                     </a>
                 </div>
 
-                <div class="single-products-catagory shadow-sm p-3 mb-5 bg-white rounded clearfix">
-                    <a href="shop.html">
-                        <img src="{{$items[1]->photo}}" class="img-fluid" style="height:450px; border-radius: 50%;">
-                        <div class="hover-content p-2 rounded">
-                            <div class="line"></div>
-                            <h4>{{$items[1]->name}}</h4>
+                <div class="container">
+                    <h2 class="my-5">Latest Products</h2>
+                    <div class="row">
+                        @foreach($items as $item)
+                        <div class="col-lg-4 col-md-6 col-sm-12">
+                            <x-item-component :item="$item"></x-item-component>
                         </div>
-                    </a>
-                </div>
-                <div class="single-products-catagory shadow-sm p-3 mb-5 bg-white rounded clearfix">
-                    <a href="shop.html">
-                        <img src="{{$categories[1]->photo}}" class="img-fluid" style="height:350px; border-radius: 50%;">
-                        <div class="hover-content p-2 rounded">
-                            <div class="line"></div>
-                            <h4>{{$categories[1]->name}}</h4>
-                        </div>
-                    </a>
-                </div>
-                <div class="single-products-catagory shadow-sm p-3 mb-5 bg-white rounded clearfix">
-                    <a href="shop.html">
-                        <img src="{{$brands[1]->photo}}" class="img-fluid" style="height:400px; border-radius: 50%;">
-                        <div class="hover-content p-2 rounded">
-                            <div class="line"></div>
-                            <h4>{{$brands[1]->name}}</h4>
-                        </div>
-                    </a>
+                        @endforeach
+                    </div>
                 </div>
 
-                <div class="single-products-catagory shadow-sm p-3 mb-5 bg-white rounded clearfix">
-                    <a href="shop.html">
-                        <img src="{{$items[2]->photo}}" class="img-fluid" style="height:450px; border-radius: 50%;">
-                        <div class="hover-content p-2 rounded">
-                            <div class="line"></div>
-                            <h4>{{$items[2]->name}}</h4>
-                        </div>
-                    </a>
-                </div>
-                <div class="single-products-catagory shadow-sm p-3 mb-5 bg-white rounded clearfix">
-                    <a href="shop.html">
-                        <img src="{{$brands[2]->photo}}" class="img-fluid" style="height:400px; border-radius: 50%;">
-                        <div class="hover-content p-2 rounded">
-                            <div class="line"></div>
-                            <h4>{{$brands[2]->name}}</h4>
-                        </div>
-                    </a>
-                </div>
-                <div class="single-products-catagory shadow-sm p-3 mb-5 bg-white rounded clearfix">
-                    <a href="shop.html">
-                        <img src="{{$categories[2]->photo}}" class="img-fluid" style="height:350px; border-radius: 50%;">
-                        <div class="hover-content p-2 rounded">
-                            <div class="line"></div>
-                            <h4>{{$categories[2]->name}}</h4>
-                        </div>
-                    </a>
-                </div>
-                
             </div>
         </div>
 

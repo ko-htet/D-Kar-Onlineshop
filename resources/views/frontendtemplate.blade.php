@@ -72,7 +72,7 @@
             <nav class="amado-nav">
                 <ul>
                     <li class="active"><a href="{{route('mainpage')}}">Home</a></li>
-                    <li><a href="{{route('shoppage')}}">Shop</a></li>
+                    <li><a href="{{route('shoppage')}}">Categories & Brands</a></li>
                     <li><a href="{{route('productpage')}}">Product</a></li>
                     @guest
                       <li><a href="{{ route('signinpage') }}">{{ __('Login') }}</a></li>
